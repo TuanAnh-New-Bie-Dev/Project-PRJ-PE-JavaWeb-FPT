@@ -24,7 +24,7 @@ public class DBConnect {
                 //driver class load
                 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
                 //create a connection..
-                String url = "jdbc:sqlserver://localhost:1433; databaseName=PRJ321_SU20; user = sa; password = anhdn123";
+                String url = "jdbc:sqlserver://localhost:1433; databaseName=Spring2021; user = sa; password = anhdn123";
                 con = DriverManager.getConnection(url);
 
             }

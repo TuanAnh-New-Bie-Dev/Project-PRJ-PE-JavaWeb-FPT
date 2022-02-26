@@ -6,7 +6,7 @@
 package servlet;
 
 import dao.DAO;
-import entity.Event;
+import entity.Event2;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
@@ -20,21 +20,22 @@ import jdbc.DBConnect;
  *
  * @author tuan anh
  */
-public class ListEventServlet extends HttpServlet {
+public class ReportServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        
+
         DAO dao = new DAO(DBConnect.getConnection());
-        
-        List<Event> listE = dao.getAllEvent();
-        
-        request.setAttribute("listE", listE);
-        request.getRequestDispatcher("list.jsp").forward(request, response);
-        
+
+        List<Event2> listE2 = dao.getAllEvent2();
+
+        request.setAttribute("listE2", listE2);
+
+        request.getRequestDispatcher("report.jsp").forward(request, response);
+
     }
 
     @Override
@@ -42,6 +43,7 @@ public class ListEventServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
+
     }
 
 }

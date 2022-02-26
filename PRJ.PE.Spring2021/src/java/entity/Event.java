@@ -36,6 +36,13 @@ public class Event {
         this.createdBy = createdBy;
     }
 
+    public Event(String content, Date date, boolean isEnable, String createdBy) {
+        this.content = content;
+        this.date = date;
+        this.isEnable = isEnable;
+        this.createdBy = createdBy;
+    }
+
     public int getId() {
         return id;
     }
