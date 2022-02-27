@@ -5,7 +5,6 @@
 --%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,6 +13,7 @@
         <title>JSP Page</title>
     </head>
     <body>
+        
         <table border="1" style="border-color: greenyellow;">
             <c:forEach items="${sessionScope.data}" var="s" >
                 <tbody>
